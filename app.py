@@ -28,11 +28,12 @@ if archivo:
         df['Mes'] = df['Fecha'].dt.month
 
         # --- Mejora 1: Resumen de calidad de datos ---
-        st.subheader("🧹 Resumen de Calidad de Datos")
+        st.subheader(" Resumen de Calidad de Datos")
         col_q1, col_q2 = st.columns(2)
         with col_q2:
-            st.markdown("#### 📈 Estadísticas Descriptivas")
+            st.markdown('<h4 style="text-align: center;">📈 Estadísticas Descriptivas</h4>', unsafe_allow_html=True)
             st.write(df[["P42", "P43", "P55"]].describe())
+
 
         # --- Mejora 2: Filtro por rango de fechas ---
         st.markdown("---")
